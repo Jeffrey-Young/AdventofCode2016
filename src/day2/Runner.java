@@ -6,7 +6,7 @@ import java.io.FileReader;
 public class Runner {
 
   private static int     _key   = 5;
-  private static int[][] keypad = new int[][] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+  private static int[][] keypad = new int[][] { { 1 }, { 2, 3, 4 }, { 5, 6, 7, 8, 9 }, { 10, 11, 12 }, { 13 } };
 
   public static void main(String[] args) {
     for (int i = 0; i < keypad.length; i++) {
@@ -63,28 +63,40 @@ public class Runner {
       return new int[] { 0, 0 };
     }
     if (key == 2) {
-      return new int[] { 0, 1 };
-    }
-    if (key == 3) {
-      return new int[] { 0, 2 };
-    }
-    if (key == 4) {
       return new int[] { 1, 0 };
     }
-    if (key == 5) {
+    if (key == 3) {
       return new int[] { 1, 1 };
     }
-    if (key == 6) {
+    if (key == 4) {
       return new int[] { 1, 2 };
     }
-    if (key == 7) {
+    if (key == 5) {
       return new int[] { 2, 0 };
     }
-    if (key == 8) {
+    if (key == 6) {
       return new int[] { 2, 1 };
     }
-    if (key == 9) {
+    if (key == 7) {
       return new int[] { 2, 2 };
+    }
+    if (key == 8) {
+      return new int[] { 2, 3 };
+    }
+    if (key == 9) {
+      return new int[] { 2, 4 };
+    }
+    if (key == 10) {
+      return new int[] { 3, 0 };
+    }
+    if (key == 11) {
+      return new int[] { 3, 1 };
+    }
+    if (key == 12) {
+      return new int[] { 3, 2 };
+    }
+    if (key == 13) {
+      return new int[] { 4, 0 };
     }
     return mapKeyToIndices(_key);
 
